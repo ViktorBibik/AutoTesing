@@ -23,15 +23,10 @@ public class FirstTest {
         
         // Login as invalid user
         driver.findElement(By.xpath("html/body/header/div[1]/div/div/div[2]/div/div/div/a[2]")).click();
-
         driver.findElement(By.xpath("//div[text()='Регистрация']//following::input[@data-name='email']")).sendKeys("viktorbibik@ukr.net");
-
         driver.findElement(By.xpath("//input[@class='btn btn-primary btn-lg' and @name='yt3']//preceding::input[1]")).sendKeys("deadmananor_1");
-
         driver.findElement(By.xpath("//input[@class='btn btn-primary btn-lg' and @name='yt3']")).click();
-
         driver.findElement(By.xpath("//div[@id='login' and @class='login-form-popup modal fade in']/div[@class='modal-dialog']/button[@class='close']")).click(); //закрыть окно
-
         //driver.findElement(By.xpath("//span[@class='tile__image' and @style='background-image: url(/images/99510-170-340-category_item_big_1_2.png);']")).click();
 
         // Ввод адресса доставки/enter delivery address
