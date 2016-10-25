@@ -67,11 +67,18 @@ public class FirstTest {
         Thread.sleep(10000);
         driver.findElement(By.xpath("//div[@class='box-inner perforation-right']//input[@id='order_models_Order_customer_name']")).sendKeys("!#@$#%$$%^^%&^@#%#$@!"); // name
         driver.findElement(By.xpath("//input[@id='order_models_Order_customer_phone']")).sendKeys("1111111111"); // phone
-        //driver.findElement(By.xpath("//input[@id='email-field']")).sendKeys("sdvdsvsdvbsd@fdbdfb.dfbdfb"); // email, only if we work as unregistered user
+        driver.findElement(By.xpath("//input[@id='email-field']")).sendKeys("sdvdsvsdvbsd@fdbdfb.dfbdfb"); // email, only if we work as unregistered user
         driver.findElement(By.xpath("//input[@id='customer_building']")).sendKeys("@!$@#%#%$^%&$%#%"); // house
         driver.findElement(By.xpath("//input[@id='order_models_Order_customer_apartment']")).sendKeys("$#%#$%^$^$@^"); // house number
         driver.findElement(By.xpath("//input[@class='btn btn-primary btn-lg btn-xs-block btn-checkout']")).click(); // confirm personal data
 
         Thread.sleep(10000);
         String body = driver.findElement(By.xpath("//div[@class='page-message page-message_simple']//div[@class='page-message__title h2']")).getText();
-        Assert.assertEquals(body, "Ваш заказ успешно принят1!");
+        Assert.assertEquals(body, "Ваш заказ успешно принят!");
+       }
+
+    /*@AfterClass
+    public void tearDown() {
+        driver.close();
+    }*/
+}
